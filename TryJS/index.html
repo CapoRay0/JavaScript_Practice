@@ -7,15 +7,21 @@
     <title>Document</title>
 
     <script>
-        alert('Hello World!');
-
-        
+        alert('Alert from head'); // 1st
+        console.log("Console hello world"); // 2st
     </script>
+
+    <script src="common.js"> // 3st </script>
 
 </head>
 <body>
 
-    <h1>Try JS</h1>
-    
+    <!--// 4st --> 
+    <h1 onclick="alert('Alert from h1')">Try JS</h1>
+
+    <script>
+        alert('Alert from body'); // 5st
+    </script>
 </body>
 </html>
+<!-- 共5項輸出 -->
