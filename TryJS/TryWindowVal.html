@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var aaa = 200; // (window 成員)
+        console.log(aaa); // 200
+        console.log(window); // 列出 Window 中所有成員
+        console.log(window.aaa); // 列出 Window 中的 aaa : 200
+        
+        function fuc1(){  // (window 成員)
+            var bbb = 150; // (function 成員)
+
+            console.log(bbb); // 150
+            console.log(window); // 列出 Window 中所有成員
+            console.log(window.bbb); // undefined
+        }
+
+        fuc1();
+
+        //console.log(bbb);
+
+        // 所有宣告的變數都屬於 window 的成員
+        // window 是 JS 的特殊物件
+        // 代表整個瀏覽器分頁，同時也是 global
+
+        // Global 等級的變數會被放在 Window 裡面
+        // function 本身(fuc1)也屬於 Window
+        // 但 fuc1 裡面的變數則不屬於 Window
+        // >>> bbb 不可越級上報，要先通過 fuc1
+
+    </script>
+</body>
+</html>
