@@ -19,18 +19,18 @@
     <script>
         // get element by id, and set innerText
         var d1 = document.getElementById("div1");
-        d1.children[2].innerHTML = "OOO"
+        d1.children[2].innerHTML = "123";
 
         // get element by tag, and set color
         var list = document.getElementsByTagName("span");
         var colorArr = [
             "red", "blue", "green"
-        ]
+        ];
 
-        for(var i = 0; i< list.length; i++){
+        for (var i = 0; i < list.length; i++) {
             var item = list[i];
             item.style = "color:" + colorArr[i % 3] + ";";
-            item.onclick = function() { 
+            item.onclick = function () {
                 console.log(i);
                 
                 this.style["color"] = "yellow"; // 只改字體
@@ -39,18 +39,18 @@
                 // this = 最靠近自己的物件
             };
         }
-        console.log("after first loop:" + i);
+        console.log("after first loop: " + i);
         // 回傳值皆為陣列，內部有多筆資料
         // HTML 允許 class 有多個名字，由空白做分隔
 
         // get element by class, and set background-color
         var list2 = document.getElementsByClassName("c1");
-        for(var i = 0; i < list2.length; i++){
+        for (var i = 0; i < list2.length; i++) {
             var txt = list2[i].style;
             //list2[i].style = "background-color: aquamarine;";
             list2[i].style["background-color"] = "aquamarine";
         }
-        console.log("after second loop:" + i);
+        console.log("after second loop: " + i);
     </script>
 
 
