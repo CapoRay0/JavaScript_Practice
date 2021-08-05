@@ -32,8 +32,10 @@
             item.style = "color:" + colorArr[i % 3] + ";";
             item.onclick = function() { 
                 console.log(i);
-                //list[i].style = "color: yellow;";
-                this.style = "color: yellow;";
+                
+                this.style["color"] = "yellow"; // 只改字體
+                //this.style = "color: yellow;"; // 背景還原(?
+                
                 // this = 最靠近自己的物件
             };
         }
@@ -44,7 +46,9 @@
         // get element by class, and set background-color
         var list2 = document.getElementsByClassName("c1");
         for(var i = 0; i < list2.length; i++){
-            list2[i].style = "background-color: aquamarine;";
+            var txt = list2[i].style;
+            //list2[i].style = "background-color: aquamarine;";
+            list2[i].style["background-color"] = "aquamarine";
         }
         console.log("after second loop:" + i);
     </script>
