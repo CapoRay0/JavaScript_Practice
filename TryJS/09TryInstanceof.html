@@ -8,12 +8,34 @@
 </head>
 <body>
     <script>
-        function User(){ // 這東西某個角度來說就是個Class
+        function User() { // 這東西某個角度來說就是個Class
         }; // 很ㄎㄧㄤ但就這樣吧 from毛豆
 
+        function Manager() {
+        };
+
         var subUser = new User();
+        console.log(subUser instanceof User); // 這個變數到底是不是User
+
+        function updateUserInfo(objUser)
+        {
+            if(objUser instanceof User) {
+                console.log("is user");
+            }
+            else if (objUser instanceof Manager){
+                console.log("is manager");
+            }
+            else{
+                console.log(" wrong.");
+            }
+        }
+
+        updateUserInfo(subUser); // User變數 >> 就是User
+        var manager = new Manager();
+        updateUserInfo(manager); // 型別為Manager
         
-        console.log(subUser instanceof User);
+        var d = new Date();
+        updateUserInfo(d); // wrong
 
     </script>
 </body>
