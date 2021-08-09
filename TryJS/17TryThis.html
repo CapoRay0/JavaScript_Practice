@@ -14,11 +14,10 @@
         // this.alert("this.alert");
 
         function Exec(){
-            console.log(window == this); // this 為 Window
+            console.log(window == this); // 全域變數 >> this 為 Window
             console.log(Exec == this); // false
             console.log(this);
         }
-
         Exec();
         console.log("-----");
 
@@ -26,7 +25,7 @@
         var car = {
             Color: "Red",
             Exec: function(){
-            console.log(car == this); // this 為 car
+            console.log(car == this); // 物件裡 >> this 為 car
             console.log(window == this);
             console.log(Exec == this);
             }
@@ -47,7 +46,7 @@
         console.log("-----");
         car2.Exec2();
         console.log("-----");
-
+        
         // car.this -> window
         // car2.this -> car2
     </script>

@@ -13,23 +13,23 @@
     <script>
         var helper = {
             Name: "helper",
-            Exec:function(){
+            AAA:function(){
                 console.log(this.Name);
             }
         };
 
         var car = {
             Name: "Car",
-            Exec:function(){
-                helper.Exec();
+            BBB:function(){
+                helper.AAA();
             },
-            Exec2:function(){
-                this.Exec();
+            CCC:function(){
+                this.BBB();
             }
         };
-
-        //  car["Exec"] = helper.Exec;
-        car.Exec2();
+        
+        car["BBB"] = helper.AAA;// 把helper.AAA中的this.Name裝到下面的car.BBB
+        car.CCC();
     </script>
 </body>
 </html>

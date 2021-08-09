@@ -23,14 +23,14 @@
             ele5.innerHTML = "2 toUTCString: " + valDate.toUTCString();
 
             //年：1~n
-            //月：0~11 ㄎㄧㄤ到爆啊!
+            //月：0~11 >> 偏移了一個月，ㄎㄧㄤ到爆啊!
             //日：1~31
             var valDate2 = new Date(2021, 8, 6);
             var ele2 = document.createElement("p");
             div1.appendChild(ele2);
             ele2.innerHTML = "3 Constructor: " + valDate2.toDateString();
 
-            var valDate3 = new Date(2021, 2, 29);
+            var valDate3 = new Date(2021, 2, 29); // 偏移 >> 應該為Feb(二月)卻跑出Mar(三月)
             var ele3 = document.createElement("p");
             div1.appendChild(ele3);
             ele3.innerHTML = "4 2021/2/29: " + valDate3.toDateString();
