@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="Scripts/jQuery-min-3.6.0.js"></script>
+
+    <script>
+        // 存取元素屬性的方法
+        $(function() {
+            console.log("ckb1[checked] = " +  $("#ckb1").prop("checked"));//讀checked的屬性
+            console.log("ckb1[id] = " +  $("#ckb1").prop("id")); //讀id
+            $("#ckb1").prop("checked", true); //寫入checked屬性的值  => false
+           
+            console.log("-----");
+            
+            console.log("ckb2[checked] = " +  $("#ckb2").attr("checked")); //讀checked的屬性
+            console.log("ckb2[id] = " +  $("#ckb2").attr("id")); //讀id
+            $("#ckb2").prop("checked", "checked"); //寫入checked屬性的值  => 回答checked
+        });
+    </script>
+
+</head>
+<body>
+    <input type="checkbox" id="ckb1" checked="checked" />
+    <input type="checkbox" id="ckb2" />
+    <span data-KeyID="001">Ray</span>
+    
+</body>
+</html>
