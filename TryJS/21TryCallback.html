@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button type="button" id="btn1">Click ME 1</button>
+    <button type="button" id="btn2">Click ME 2</button>
+    <button type="button" id="btn3">Click ME 3</button>
+    <button type="button" id="btn4">Click ME 4</button>
+    <button type="button" id="btn5">Click ME 5</button>
+    <button type="button" id="btn6">Click ME 6</button>
+    <button type="button" id="btn7">Click ME 7</button>
+
+    <script>
+        var btn = document.getElementById("btn1");
+        btn.onclick = function(){
+            alert(123);
+        };
+
+        // funcCallBack: function of CallBack
+        // or 稱作委派 (delegate) >> 就是事件的概念
+        function bindClickMethod(strBtnID, funcCallBack){ //寫成方法
+            var btn = document.getElementById(strBtnID); // "btn1"...
+            btn.onclick = funcCallBack; //執行外面丟進來的 Method
+            // (不知道外部做了什麼事情)
+        }
+
+        // 外部
+        bindClickMethod("btn1", function() {alert("1"); });
+        bindClickMethod("btn2", function() {alert("2"); });
+        bindClickMethod("btn3", function() {alert("3"); });
+        bindClickMethod("btn4", function() {alert("4"); });
+        bindClickMethod("btn5", function() {alert("5"); });
+        bindClickMethod("btn6", function() {alert("6"); });
+        bindClickMethod("btn7", function() {alert("7"); });
+    </script>
+
+</body>
+</html>
