@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="Scripts/jQuery-min-3.6.0.js"></script>
+    <script>
+        $(function () {
+
+            //$("p").click(function(){});
+
+            var jqDom = $("p");
+            //jqDom[0].innerHTML = "jqDom";
+
+            function appendEvent(_jqDom) {
+                jqDom.click(function () { alert(123); });
+            };
+
+            function changeColor(_jqDom) {
+                jqDom.css("color", "red");
+            };
+
+            appendEvent(jqDom);
+            changeColor(jqDom);
+
+            var htmlDom = document.getElementsByTagName("p");
+            //htmlDom[1].innerHTML = "htmlDom";
+            $(htmlDom[1]).css("color","blue");
+            
+            var tempObj = $("<p>aaa</p>");
+            tempObj.css("color","green");
+            //$("body").append(tempObj);
+            tempObj.appendTo("body");
+        });
+    </script>
+</head>
+
+<body>
+    <p>this is an apple. 哈哈哈哈哈</p>
+    <p>this is a book. 呵呵呵呵呵</p>
+</body>
+
+</html>
